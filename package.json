@@ -11,6 +11,7 @@
     "@types/redux": "^3.6.0",
     "@types/reselect": "^2.2.0",
     "@types/styled-components": "^4.1.4",
+    "express": "^4.16.4",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
@@ -21,7 +22,8 @@
     "typescript": "3.2.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "rm -rf build && npm run build && node server.js",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
