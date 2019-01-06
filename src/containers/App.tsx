@@ -5,10 +5,12 @@ import { Dispatch, bindActionCreators } from 'redux';
 import RootWrapper from '../components/RootWrapper';
 import GlobalStyles from '../global-styles';
 import { fetchProducts } from '../actions';
-import { IApplicationRootState } from '../types';
+import { selectProducts } from '../selectors';
+import { IApplicationRootState, IProduct } from '../types';
 
 interface IProps {
   fetchProducts: Function;
+  products: IProduct[];
 };
 
 class App extends React.Component<IProps> {
@@ -27,7 +29,9 @@ class App extends React.Component<IProps> {
   }
 }
 
-const mapStateToProps = (state: IApplicationRootState) => ({});
+const mapStateToProps = (state: IApplicationRootState) => ({
+  products: selectProducts(state),
+});
 
 const mapDispatchToProps = (dispatch: Dispatch) => bindActionCreators({
   fetchProducts,
