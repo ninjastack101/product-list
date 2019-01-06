@@ -1,6 +1,12 @@
 
-export interface IProducts {
-
+export interface IProduct {
+  id: string;
+  title: string;
+  currency_id: string;
+  price: number;
+  available_quantity: number;
+  sold_quantity: number;
+  thumbnail: string;
 };
 
 export interface IProducts {
