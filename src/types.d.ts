@@ -6,6 +6,11 @@ export interface IItem {
 };
 
 // Application Reducer state type
-interface IAppReducerState {
+export interface IAppReducerState {
   items: IItem[];
 };
+
+// Application Root State
+export interface IApplicationRootState {
+  readonly app: IAppReducerState;
+}
