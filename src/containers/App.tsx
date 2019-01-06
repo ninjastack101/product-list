@@ -4,19 +4,34 @@ import { Dispatch, bindActionCreators } from 'redux';
 
 import RootWrapper from '../components/RootWrapper';
 import GlobalStyles from '../global-styles';
+import { fetchProducts } from '../actions';
 import { IApplicationRootState } from '../types';
 
-interface IProps {};
+interface IProps {
+  fetchProducts: Function;
+};
 
-const App = (props: IProps) => (
-  <RootWrapper>
-    <GlobalStyles />
-  </RootWrapper>
-);
+class App extends React.Component<IProps> {
+  constructor(props: IProps) {
+    super(props);
+
+    props.fetchProducts();
+  }
+
+  render() {
+    return (
+      <RootWrapper>
+        <GlobalStyles />
+      </RootWrapper>
+    );
+  }
+}
 
 const mapStateToProps = (state: IApplicationRootState) => ({});
 
-const mapDispatchToProps = (dispatch: Dispatch) => bindActionCreators({}, dispatch);
+const mapDispatchToProps = (dispatch: Dispatch) => bindActionCreators({
+  fetchProducts,
+}, dispatch);
 
 export default connect(
   mapStateToProps,
