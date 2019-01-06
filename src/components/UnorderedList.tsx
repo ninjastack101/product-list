@@ -8,10 +8,15 @@ interface IProps {
   items: IItem[];
 };
 
+const shouldHighlightItem = (index: number) => {
+  const number = index + 1;
+  return number % 3 === 0;
+};
+
 const UnorderedList = (props: IProps) => (
   <Ul>
     {props.items.map((item, index) => (
-      <Li key={item.key}>
+      <Li key={item.key} highlight={shouldHighlightItem(index)}>
         {item.label}
       </Li>
     ))}
