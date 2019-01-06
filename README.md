@@ -2,12 +2,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Test task project - 1
 
-##Development Instruction
+## Development Instruction
 
-###Prerequisites
+### Prerequisites
   - node.js
   - npm
 
+### Running the application
 - Install dependencies with `npm install`
 - Start server with `npm start`
 
