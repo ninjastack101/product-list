@@ -1,14 +1,6 @@
 
-// List Item type
-export interface IItem {
-  key: string;
-  label: string;
-};
-
 // Application Reducer state type
-export interface IAppReducerState {
-  items: IItem[];
-};
+export interface IAppReducerState {};
 
 // Application Root State
 export interface IApplicationRootState {

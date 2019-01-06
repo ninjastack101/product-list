@@ -2,34 +2,21 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Dispatch, bindActionCreators } from 'redux';
 
-import InputButton from '../components/InputButton';
-import UnorderedList from '../components/UnorderedList';
 import RootWrapper from '../components/RootWrapper';
-import { addListItem } from '../actions';
-import { selectItems } from '../selectors';
 import GlobalStyles from '../global-styles';
-import { IApplicationRootState, IItem } from '../types';
+import { IApplicationRootState } from '../types';
 
-interface IProps {
-  items: IItem[];
-  addListItem: (item: IItem) => void;
-};
+interface IProps {};
 
 const App = (props: IProps) => (
   <RootWrapper>
-    <InputButton onClick={props.addListItem} />
-    <UnorderedList items={props.items} />
     <GlobalStyles />
   </RootWrapper>
 );
 
-const mapStateToProps = (state: IApplicationRootState) => ({
-  items: selectItems(state),
-});
+const mapStateToProps = (state: IApplicationRootState) => ({});
 
-const mapDispatchToProps = (dispatch: Dispatch) => bindActionCreators({
-  addListItem,
-}, dispatch);
+const mapDispatchToProps = (dispatch: Dispatch) => bindActionCreators({}, dispatch);
 
 export default connect(
   mapStateToProps,
