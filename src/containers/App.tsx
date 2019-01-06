@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Dispatch, bindActionCreators } from 'redux';
 
 import RootWrapper from '../components/RootWrapper';
+import ProductList from '../components/ProductList';
 import GlobalStyles from '../global-styles';
 import { fetchProducts } from '../actions';
 import { selectProducts } from '../selectors';
@@ -23,6 +24,7 @@ class App extends React.Component<IProps> {
   render() {
     return (
       <RootWrapper>
+        <ProductList products={this.props.products} />
         <GlobalStyles />
       </RootWrapper>
     );
