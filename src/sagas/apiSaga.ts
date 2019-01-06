@@ -22,7 +22,7 @@ export function* apiSaga(action: IApiAction) {
       throw new Error('Failed to fetch response from server');
     }
   
-    yield put({ type: success, data: response });
+    yield put({ type: success, data: response.data });
   } catch(error) {
     yield put({ type: failure, error });
   }
