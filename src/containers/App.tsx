@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Dispatch, bindActionCreators } from 'redux';
 
 import InputButton from '../components/InputButton';
+import UnorderedList from '../components/UnorderedList';
 import RootWrapper from '../components/RootWrapper';
 import { addListItem } from '../actions';
 import { selectItems } from '../selectors';
@@ -15,8 +16,9 @@ interface IProps {
 };
 
 const App = (props: IProps) => (
-  <RootWrapper>`
+  <RootWrapper>
     <InputButton onClick={props.addListItem} />
+    <UnorderedList items={props.items} />
     <GlobalStyles />
   </RootWrapper>
 );
