@@ -10,7 +10,9 @@ const Wrapper = styled('div')`
   margin: 20px;
 `;
 
-interface IProps {};
+interface IProps {
+  onClick: (event: any) => void;
+};
 
 class InputButton extends Component<IProps> {
   private input: any;
@@ -26,8 +28,13 @@ class InputButton extends Component<IProps> {
       key: input.value,
       label: input.value,
     };
-    console.log('===add====',  item);
+    
+    this.props.onClick(item);
+
+    // empty input again.
     input.value = "";
+
+    // focus on the input element.
     input.focus();
   }
 
