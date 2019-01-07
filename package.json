@@ -28,7 +28,7 @@
     "typescript": "3.2.2"
   },
   "scripts": {
-    "start": "rm -rf build && npm run build && node server.js",
+    "start": "node server.js",
     "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
