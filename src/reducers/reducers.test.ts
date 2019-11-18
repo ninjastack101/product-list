@@ -43,7 +43,7 @@ describe('fetchProducts', () => {
         results: {
           id: "category",
           name: "Categories",
-          type: "text"
+          type: "text",
         },
       },
     };
@@ -63,7 +63,7 @@ describe('fetchProducts', () => {
 
     const failAction = {
       type: actions.FETCH_PRODUCTS_LIST_FAILURE,
-      error: 'unable to fetch product list'
+      error: 'unable to fetch product list',
     };
 
     const expectObj = {

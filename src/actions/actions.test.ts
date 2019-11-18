@@ -23,7 +23,7 @@ describe('fetchProducts', () => {
           actions.FETCH_PRODUCTS_LIST_FAILURE,
         ],
         method: 'get',
-        endPoint: 'sites/MLA/search?q=book&limit=30#json'
+        endPoint: 'sites/MLA/search?q=book&limit=30#json',
       }
     ];
     store.dispatch(fetchProducts());
