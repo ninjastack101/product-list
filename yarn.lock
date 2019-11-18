@@ -1313,9 +1313,9 @@
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.3.tgz#bdfd69d61e464dcc81b25159c270d75a73c1a636"
 
-"@types/node@10.12.18":
-  version "10.12.18"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.18.tgz#1d3ca764718915584fcd9f6344621b7672665c67"
+"@types/node@12.12.8":
+  version "12.12.8"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.8.tgz#dab418655af39ce2fa99286a0bed21ef8072ac9d"
 
 "@types/prop-types@*":
   version "15.5.8"
