@@ -13,7 +13,7 @@
     "@types/redux-logger": "^3.0.6",
     "@types/redux-saga": "^0.10.5",
     "@types/reselect": "^2.2.0",
-    "@types/styled-components": "^4.1.4",
+    "@types/styled-components": "^4.4.0",
     "axios": "^0.18.1",
     "express": "^4.17.1",
     "react": "^16.11.0",
