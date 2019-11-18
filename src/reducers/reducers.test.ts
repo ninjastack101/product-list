@@ -12,17 +12,17 @@ describe('fetchProducts', () => {
     },
   };
 
-  it('should return the initial state', done => {
+  it('should return the initial state', (done) => {
     const initAction: any = {};
     expect(reducer(undefined, initAction)).toEqual(initialState);
     done();
   });
 
-  it('should handle FETCH_PRODUCTS_LIST_REQUEST', done => {
+  it('should handle FETCH_PRODUCTS_LIST_REQUEST', (done) => {
 
     const startAction = {
       type: actions.FETCH_PRODUCTS_LIST_REQUEST,
-    }
+    };
 
     const expectObj = {
       products: {
@@ -35,7 +35,7 @@ describe('fetchProducts', () => {
     done();
   });
 
-  it('should handle FETCH_PRODUCTS_LIST_SUCCESS', done => {
+  it('should handle FETCH_PRODUCTS_LIST_SUCCESS', (done) => {
 
     const actionSuccess = {
       type: actions.FETCH_PRODUCTS_LIST_SUCCESS,
@@ -59,12 +59,12 @@ describe('fetchProducts', () => {
     done();
   });
 
-  it('should handle FETCH_PRODUCTS_LIST_FAILURE', done => {
+  it('should handle FETCH_PRODUCTS_LIST_FAILURE', (done) => {
 
     const failAction = {
       type: actions.FETCH_PRODUCTS_LIST_FAILURE,
       error: 'unable to fetch product list'
-    }
+    };
 
     const expectObj = {
       products: {
