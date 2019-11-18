@@ -44,6 +44,6 @@ describe('fetchProducts', () => {
       endPoint: 'sites/MLA/search?q=book&limit=30#json'
     };
     expect(fetchProducts()).toEqual(expectedActions);
-    done()
+    done();
   });
 });
