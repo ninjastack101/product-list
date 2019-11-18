@@ -4,8 +4,6 @@ import reducer from './index';
 
 describe('fetchProducts', () => {
 
-  let initaction: any = {};
-
   let initialState: IAppReducerState = {
     products: {
       error: undefined,
@@ -15,7 +13,8 @@ describe('fetchProducts', () => {
   };
 
   it('should return the initial state', done => {
-    expect(reducer(undefined, initaction)).toEqual(initialState);
+    const initAction: any = {};
+    expect(reducer(undefined, initAction)).toEqual(initialState);
     done();
   });
 

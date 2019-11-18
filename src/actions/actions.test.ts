@@ -12,7 +12,7 @@ describe('fetchProducts', () => {
     store.clearActions();
   });
 
-  it('should dispatch the fetch products action', done => {
+  it('should dispatch the fetch products action', (done) => {
 
     const expectedActions = [
       {
@@ -20,30 +20,29 @@ describe('fetchProducts', () => {
         types: [
           actions.FETCH_PRODUCTS_LIST_REQUEST,
           actions.FETCH_PRODUCTS_LIST_SUCCESS,
-          actions.FETCH_PRODUCTS_LIST_FAILURE
+          actions.FETCH_PRODUCTS_LIST_FAILURE,
         ],
         method: 'get',
         endPoint: 'sites/MLA/search?q=book&limit=30#json'
       }
-    ]
+    ];
     store.dispatch(fetchProducts());
     expect(store.getActions()).toEqual(expectedActions);
-    done()
+    done();
   });
 
-  it('should dispatch the fetch products without dispatch action', done => {
+  it('should dispatch the fetch products without dispatch action', (done) => {
 
-    const expectedActions =
-    {
+    const expectedActions = {
       type: CALL_API,
       types: [
         actions.FETCH_PRODUCTS_LIST_REQUEST,
         actions.FETCH_PRODUCTS_LIST_SUCCESS,
-        actions.FETCH_PRODUCTS_LIST_FAILURE
+        actions.FETCH_PRODUCTS_LIST_FAILURE,
       ],
       method: 'get',
       endPoint: 'sites/MLA/search?q=book&limit=30#json'
-    }
+    };
     expect(fetchProducts()).toEqual(expectedActions);
     done()
   });
